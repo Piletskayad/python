@@ -1,29 +1,10 @@
-""" Пользователь вводит месяц в виде целого числа от 1 до 12.
-Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
-Напишите решения через list и через dict. """
-
-# Решение через list
-
-number_month = int(input('Введите номер последовательности месяца: '))
-winter = [12, 1, 2]
-spring = [3, 4, 5]
-summer = [6, 7, 8]
-autumn = [9, 10, 11]
-
-if number_month in winter:
-    print('Сейчас зима!')
-elif number_month in spring:
-    print('Сейчас весна!')
-elif number_month in summer:
-    print('Сейчас лето!')
-elif number_month in autumn:
-    print('Сейчас осень!')
-else:
-    print('Введите корректный номер месяца.')
-
-# Решение через dict
-
-months_dict = {12: 'Зима', 1: 'Зима', 2: 'Зима', 3: 'Весна', 4: 'Весна', 5: 'Весна', 6: 'Лето',
-               7: 'Лето', 8: 'Лето', 9: 'Осень', 10: 'Осень', 11: 'Осень'}
-a = int(input('Введите номер месяца: '))
-print(months_dict.pop(a))
+"""Реализовать функцию my_func(), которая принимает три позиционных аргумента,
+и возвращает сумму наибольших двух аргументов."""
+def my_func(arg_1, arg_2, arg_3):
+    my_list = [arg_1, arg_2,arg_3]
+    term_1 = max(my_list)
+    my_list.remove(term_1)
+    term_2 = max(my_list)
+    result = term_1 + term_2
+    return print(result)
+my_func(20,30,40)
